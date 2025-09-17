@@ -1,0 +1,289 @@
+@font-face {
+    font-family: "Reg";
+    src: url('../fonts/Prompt-Regular.ttf');
+}
+
+@font-face {
+    font-family: "Bold";
+    src: url(../fonts/Prompt-SemiBold.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+h2{
+    font-family: "Bold";
+    text-align: center;
+    font-size: 3vh;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+
+/* навигация */
+header{
+    padding: 8vh;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+
+    font-family: "Bold";
+    font-size: 2.5vh;
+}
+
+.logo img{
+    height: 2vh;
+}
+
+button{
+    padding: 2vh 2vw;
+    border-radius: 4vh;
+    font-size: 2vh;
+    border: #CF881D 2px solid;
+    background: none;
+
+    cursor: pointer;
+}
+
+.minorButton{
+    color: #CF881D;
+}
+
+.accentButton{
+    color: white;
+    background-color: #CF881D;
+}
+
+/* main */
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4vw;
+
+    width: 100%;
+    padding: 6vh;
+
+    box-sizing: border-box;
+}
+
+main>div{
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#banner{
+    width: 30%;
+    height: 80vh;
+    padding: 3vw;
+
+    color: white;
+
+    background-image: url(../img/clean.png);
+    filter: sepia(20%);
+    background-position: 10%;
+}
+
+#banner h2{
+    font-size: 4vh;
+    line-height: 3.5vh;
+}
+
+#banner::before{
+    position: absolute;
+    content: url('../img/sparkles.png');
+    top: 10%; left: 10%;
+}
+
+#banner::after{
+    position: absolute;
+    content: url('../img/sparkles.png');
+    bottom: 10%; right: 10%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2vh;
+
+    width: 30%;
+
+    color: black;
+
+    font-family: "Reg";
+}
+
+form>div{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+}
+
+input, select{
+    padding: 1vh;
+
+    border-radius: 2vh;
+    border: 2px solid #CF881D;
+    background-color: white;
+}
+
+/* регистрация */
+#bannerReg{
+    position: relative;
+    justify-content: start;
+    align-items: start;
+
+    width: 35vw;
+    height: 60vh;
+}
+
+#bannerReg img{
+    width: 70%;
+    height: 70%;
+}
+
+.above{
+    position: absolute;
+    z-index: 2;
+    bottom: 0%; right: 0;
+}
+
+#bannerReg::after{
+    content: url(../img/sparklesOrange.png);
+    position: absolute;
+    top: 0; right: 0;
+}
+
+#bannerReg::before{
+    content: url(../img/sparklesOrange.png);
+    position: absolute;
+    bottom: 0; left: 0;
+}
+
+
+/* формирование заявки */
+#bannerOrder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+  	width: 100%;
+}
+
+.ordersMain{
+    flex-direction: column;
+}
+
+.ordersList{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+
+    width: 100%;
+}
+
+.order{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  	gap: 2vh;
+
+    background-color: lightgray;
+    padding: 4vh;
+    border-radius: 50px;
+
+    box-sizing: border-box;
+}
+
+/* подвал */
+footer{
+    width: 100%;
+    font-family: "Reg";
+}
+
+footer>div{
+    display: flex;
+    justify-content: space-between;
+
+    padding: 6vh;
+}
+
+.contacts{
+    display: flex;
+  	gap: 2vh;
+}
+
+.contacts>div{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.srcs{
+    display: flex;
+    flex-direction: column;
+}
+
+.copyright{
+    background-color: black;
+    color: white;
+}
+
+/* адаптивки */
+@media screen and (max-width: 390px) {
+    header, footer>div{
+        padding: 2vh;
+    }
+
+    /* авторизация */
+    #bannerReg, #banner{
+        display: none;
+    }
+
+    form{
+        width: 100%;
+    }
+
+    .ordersMain{
+        padding: 2vh;
+    }
+
+    .order{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contacts{
+        flex-direction: column;
+    }
+}
