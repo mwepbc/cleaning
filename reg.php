@@ -1,11 +1,18 @@
+<?php
+include('assets/functions/connect.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoyNeSam</title>
     <link rel="stylesheet" href="assets/style/style.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -31,7 +38,7 @@
             </h2>
         </div>
 
-        <form action="" method="POST">
+        <div class="form">
             <h2>REGISTRATION</h2>
             <div>
                 <label for="login">LOGIN</label>
@@ -63,8 +70,9 @@
             </div>
 
             <button type="submit" class="accentButton">ЗАРЕГИСТРОВАТЬСЯ</button>
-        </form>
+        </div>
     </main>
     <?php include('assets/includes/footer.php'); ?>
 </body>
+
 </html>
