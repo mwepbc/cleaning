@@ -11,6 +11,9 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+
+    transition: 0.5s ease-out;
 }
 
 a{
@@ -72,6 +75,17 @@ button{
     color: white;
     background-color: #CF881D;
 }
+
+.accentButton:hover{
+    color: #CF881D;
+    background-color: white;
+}
+
+.minorButton:hover{
+    color: white;
+    background-color: #CF881D;
+}
+
 
 /* main */
 main{
@@ -141,6 +155,10 @@ main>div{
     display: flex;
     flex-direction: column;
     gap: 1.5vh;
+}
+
+.error{
+    color: rgb(255, 98, 98);
 }
 
 input, select{

@@ -53,7 +53,18 @@
                         const response = await fetch(request);
                         const result = await response.json();
                         console.log("Success:", result);
-                        error_p.innerHTML = result.result;
+
+                        if (result.error)
+                            error_p.innerHTML = result.error;
+                        else {
+                            try {
+                                // кука будет удалена через час (3600 миллисекунд)
+                                document.cookie = `user_id=${result.id}; max-age=3600`;
+
+                            } catch (error) {
+                                error_p.innerHTML = error;
+                            }
+                        }
                     } catch (error) {
                         console.error("Error:", error);
                     }

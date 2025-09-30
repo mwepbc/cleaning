@@ -69,7 +69,7 @@ include('assets/functions/connect.php');
                 <p class="error"></p>
             </div>
 
-            <button type="submit" class="accentButton">ЗАРЕГИСТРОВАТЬСЯ</button>
+            <button class="accentButton">ЗАРЕГИСТРОВАТЬСЯ</button>
         </div>
     </main>
     <?php include('assets/includes/footer.php'); ?>
